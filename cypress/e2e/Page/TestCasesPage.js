@@ -10,6 +10,5 @@ class TestCases {
         return cy.getBySel(LOCATORS.TestCases_Text.TextTitle)
     }
 }
-
 export default TestCases
 
