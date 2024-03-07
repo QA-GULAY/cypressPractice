@@ -2,8 +2,7 @@ import LOCATORS from "../../support/locators"
 import HomePage from "../Page/HomePage"
 import TestCases from "../Page/TestCasesPage"
 describe("TestCases Tests", () => {
-    const testPage = new HomePage()
-    const testCasesPage = new TestCases()
+    const homePage = new HomePage()
     let user;
     before(() => {
         cy.fixture('userDatas/info').then((userInfo) => {
@@ -12,10 +11,10 @@ describe("TestCases Tests", () => {
     })
 
     it("Kullanici test case sayfasina basariyla erisebilmeli", () => {
-        testPage.visitPage()
+        homePage.visitPage()
         cy.contains(user.home.homePageText).should("be.visible")
-        testCasesPage.clickTestCases()
-        testCasesPage.getTextTitle().should("be.visible")
+        cy.getBySel(LOCATORS.HOME_PAGE.TEST_CASES_BTN).click()
+        cy.getBySel(LOCATORS.TESTCASES_PAGE.TESTCASES_TEXT)
     })
 
 })
