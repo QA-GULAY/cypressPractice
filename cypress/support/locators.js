@@ -2,16 +2,13 @@ const LOCATORS = {
   EXAMPLE_PAGE: {
     EXAMPLE: ".example",
   },
-  TestCases_PAGE: {
-    TestCases: '.nav > li > a[href="/test_cases"]',
-  },
-  TestCases_Text: {
-    TextTitle: ".text-center>b",
+  TESTCASES_PAGE: {
+    TESTCASES_TEXT: ".text-center>b",
   },
   HOME_PAGE: {
     LOGIN_BTN: 'a[href="/login"]',
     HEADER: "#header",
-    PRODUCTS_BTN: '[href="/products"]',
+    PRODUCTS_BTN: '[href="/products"]',//t
     CART_BUTTON: 'header#header li:nth-child(3) > a',
     LOGOUT_BTN: 'header#header li:nth-child(4) > a',
     SUBSCRIPTION_TEXT: ".single-widget",
@@ -21,7 +18,9 @@ const LOCATORS = {
     CART_BTN: "a[href='/view_cart']",
     CATEGORY: " .left-sidebar>h2",
     WOMEN: ' [data-parent="#accordian"]',
-    DRESS: '[href="/category_products/1"]'
+    DRESS: '[href="/category_products/1"]',
+    TEST_CASES_BTN: '.nav > li > a[href="/test_cases"]',
+
   },
   LOGIN_PAGE: {
     SIGNUP_NAME: "signup-name",
