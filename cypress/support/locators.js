@@ -144,7 +144,7 @@ const LOCATORS = {
     PRODUCT_1: '[data-product-id="1"]',
     PRODUCT_2: '[data-product-id="2"]',
     COUNTINUE_SHOPPING: ".btn.btn-success.close-modal.btn-block",
-    VIEW_CART: '[class="text-center"] a',  //DEGISIKLIK YAPILDI
+    VIEW_CART: '[class="text-center"] a',  
     PRODUCT_1_PRICE: "#product-1 .cart_price",
     PRODUCT_2_PRICE: "#product-2 .cart_price",
     PRODUCT_1_QUANTITY: "#product-1 .disabled",
@@ -153,7 +153,7 @@ const LOCATORS = {
     PRODUCT_2_TOTAL: "#product-2 .cart_total_price",
     RECOMENDED_ITEMS: ".recommended_items",
     ADD_RECOMENDED: ".recommended_items .item.active .add-to-cart",
-    VIEW_RECOMMENDCART: "#cartModal u",  //DEGISIKLIK YAPILDI
+    VIEW_RECOMMENDCART: "#cartModal u",
     CART_PRODUCT: "#product-4 h4 > a",
     PROCEED_TO_CHECKOUT_BTN: '.col-sm-6 .btn'
   },
