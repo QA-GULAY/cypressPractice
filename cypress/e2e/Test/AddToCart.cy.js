@@ -18,8 +18,8 @@ describe("Add to Cart Tests", () => {
         cy.getBySel(LOCATORS.ADD_TO_CART.COUNTINUE_SHOPPING).click()
         cy.getBySel(LOCATORS.ADD_TO_CART.PRODUCT_2).contains('Add to cart').should("be.visible")
         cy.getBySel(LOCATORS.ADD_TO_CART.PRODUCT_2).contains('Add to cart').click()
-        cy.getBySel(LOCATORS.ADD_TO_CART.WIEW_CART).should("be.visible")
-        cy.getBySel(LOCATORS.ADD_TO_CART.WIEW_CART).click()
+        cy.getBySel(LOCATORS.ADD_TO_CART.VIEW_CART).should("be.visible")
+        cy.getBySel(LOCATORS.ADD_TO_CART.VIEW_CART).click()
         cy.getBySel(LOCATORS.ADD_TO_CART.PRODUCT_1_PRICE).should('contain','Rs. 500')
         cy.getBySel(LOCATORS.ADD_TO_CART.PRODUCT_2_PRICE).should('contain','Rs. 400')
         cy.getBySel(LOCATORS.ADD_TO_CART.PRODUCT_1_QUANTITY).should('contain','1')
@@ -35,7 +35,7 @@ describe("Add to Cart Tests", () => {
         cy.scrollTo('bottom')
         cy.getBySel(LOCATORS.ADD_TO_CART.RECOMENDED_ITEMS).should('be.visible')
         cy.getBySel(LOCATORS.ADD_TO_CART.ADD_RECOMENDED).first().click()
-        cy.getBySel(LOCATORS.ADD_TO_CART.WIEW_RECOMMENDCART).contains('View Cart').click()
+        cy.getBySel(LOCATORS.ADD_TO_CART.VIEW_RECOMMENDCART).contains('View Cart').click()
         cy.getBySel(LOCATORS.ADD_TO_CART.CART_PRODUCT).should('be.visible')
       });    
 
