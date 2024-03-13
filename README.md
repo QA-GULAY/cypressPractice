@@ -43,3 +43,4 @@
     |- videos ## keeps videos for failed tests
     |- .gitignore ## ignore files to process
     |- cypress.config.js ## cypress configuration file
+
