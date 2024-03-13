@@ -1,45 +1,45 @@
 # MBA-CYPRESS-REAL-WORK-PROJECT
 
-* Bu proje,Master Branch Academy tarafindan "Cypress Pratigi"  yapmak amaciyla olusturulmustur
+* This project was created by Master Branch Academy for the purpose of "Cypress Practice"
 
        -> https://automationexercise.com/
 
-* Yalnızca web sitesinin kullanıcı arayüzünü kapsar
+* Covers only the user interface of the website
+  
+* Created with Javascript
 
-* Javascript ile oluşturulmuştur
+* POM was preferred as the design pattern.
 
-* Tasarım deseni olarak POM tercih edilmiştir.
+### How to install? ###
 
-### Nasıl kurulur? ###
-
-* node.js'yi yükleyin
+* Install node.js
 * npm install
 * npm install cypress@13.0.0 --save-dev
 
-### Cypress kontrol paneli nasıl açılır? ###
+### How to open Cypress control panel? ###
 
 * npx cypress open
 
-### Tüm testler nasıl çalıştırılır? ###
+### How to run all tests? ###
 
 * npx cypress run
 
-### Belirli bir test nasıl yapılır? ###
+### How to perform a specific test? ###
 
 * npx cypress run --spec ./cypress/e2e/Test/HomePage.cy.js
 
-### Dosya yapısı ###
+### File structure ###
 
 |- MBA-CYPRESS-REAL-WORK-PROJECT
     |- cypress
 
-        |- e2e ##  test dosyalarını ve page'leri tutar
-           |- Page ## web sayfasında belirtilen yöntemleri tutar
-           |- Test ## testleri tutar
-        |- fixture ## isteğe bağlı json dosyalarını tutar
+        |- e2e ##  keeps test files and pages
+           |- Page ## keeps the methods specified on the web page
+           |- Test ## keeps tests
+        |- fixture ## holds optional json files
      
-    |- screenshots ## başarısız testlerin ekran görüntülerini tutar
-    |- support ##  özel komutları tutar
-    |- videos ## başarısız testler için videolar tutar
-    |- .gitignore ## işlenecek dosyaları yoksay
-    |- cypress.config.js ## cypress yapılandırma dosyası
+    |- screenshots ## keeps screenshots of failed tests
+    |- support ##  holds special commands
+    |- videos ## keeps videos for failed tests
+    |- .gitignore ## ignore files to process
+    |- cypress.config.js ## cypress configuration file
