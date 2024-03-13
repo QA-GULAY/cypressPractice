@@ -15,5 +15,4 @@ describe("TestCases Tests", () => {
         cy.getBySel(LOCATORS.HOME_PAGE.TEST_CASES_BTN).click()
         cy.getBySel(LOCATORS.TESTCASES_PAGE.TESTCASES_TEXT)
     })
-
 })
