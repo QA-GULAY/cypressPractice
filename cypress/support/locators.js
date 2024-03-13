@@ -153,7 +153,7 @@ const LOCATORS = {
     PRODUCT_2_TOTAL: "#product-2 .cart_total_price",
     RECOMENDED_ITEMS: ".recommended_items",
     ADD_RECOMENDED: ".recommended_items .item.active .add-to-cart",
-    WIEW_RECOMMENDCART: "#cartModal u",
+    VIEW_RECOMMENDCART: "#cartModal u",  //DEGISIKLIK YAPILDI
     CART_PRODUCT: "#product-4 h4 > a",
     PROCEED_TO_CHECKOUT_BTN: '.col-sm-6 .btn'
   },
