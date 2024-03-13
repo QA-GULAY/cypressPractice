@@ -60,10 +60,10 @@ const LOCATORS = {
     ACCOUNT_CREATED: "account-created",
     CONTINUE_BTN: "continue-button",
   },
-  New_User_Signup: {
+  NEW_USER_SIGNUP: {   //DEGISIKLIK YAPILDI
     NAME:"signup-name",
     EMAIL_ADDRESS:"signup-email",
-    SINGUP_BOTUN:"signup-button",
+    SINGUP_BTN:"signup-button", //DEGISIKLIK YAPILDI
   },
   DELETE_PAGE: {
     DELETE_ACCOUNT_BTN: "li:nth-child(5) > a",
@@ -144,7 +144,7 @@ const LOCATORS = {
     PRODUCT_1: '[data-product-id="1"]',
     PRODUCT_2: '[data-product-id="2"]',
     COUNTINUE_SHOPPING: ".btn.btn-success.close-modal.btn-block",
-    WIEW_CART: '[class="text-center"] a',
+    VIEW_CART: '[class="text-center"] a',  //DEGISIKLIK YAPILDI
     PRODUCT_1_PRICE: "#product-1 .cart_price",
     PRODUCT_2_PRICE: "#product-2 .cart_price",
     PRODUCT_1_QUANTITY: "#product-1 .disabled",
@@ -159,32 +159,31 @@ const LOCATORS = {
   },
   CHECKOUT_PAGE: {
     DELIVERY_ADDRESS: {
-      FIRST_NAME_LAST_NAME:
-        "#address_delivery > li.address_firstname.address_lastname",
-      ADDRESS1_ADDRESS2: "#address_delivery > li:nth-child(4)",
-      CITY_STATE_POSTCODE:
-        "address_delivery > li.address_city.address_state_name.address_postcode",
-      COUNTRY: "#address_delivery > li.address_country_name",
-      PHONE: "#address_delivery > li.address_phone",
+    FIRST_NAME_LAST_NAME: "#address_delivery > li.address_firstname.address_lastname",
+    ADDRESS1_ADDRESS2: "#address_delivery > li:nth-child(4)",
+    CITY_STATE_POSTCODE: "address_delivery > li.address_city.address_state_name.address_postcode",
+    COUNTRY: "#address_delivery > li.address_country_name",
+    PHONE: "#address_delivery > li.address_phone",
     },
-    REVIEW_ORDER: {
-      PRODUCT_1: "#product-1",
-      PRODUCT_TITLE: "h4 > a",
-      PRODUCT_PRICE: "td.cart_price > p",
-      QUANTITY: "button",
-      TOTAL: "td.cart_total > p",
+  REVIEW_ORDER: {
+    PRODUCT_1: "#product-1",
+    PRODUCT_TITLE: "h4 > a",
+    PRODUCT_PRICE: "td.cart_price > p",
+    QUANTITY: "button",
+    TOTAL: "td.cart_total > p",
     },
     COMMENT_TEXT_AREA: "#ordermsg > textarea",
     PLACE_ORDER_BTN: "#cart_items a[href='/payment']",
   },
-  Brands: {
-    productsButton: '[href="/products"]',
-    brandsSidebar: ".brands_products",
-    brandPoloLink: '[href="/brand_products/Polo"]',
-    brandProducts: ".brand-products",
-    VerifyBrandPolo: '[href="/product_details/1"]',
-    brandHMLink: '[href="/brand_products/H&M"]',
-    VerifyBrandHM: '[href="/product_details/6"]',
+  BRANDS: {//buyuk yazildi
+    PRODUCTS_BTN: '[href="/products"]',//tekrar add to carttan alndi
+    BRANDS_SIDEBAR: ".brands_products",
+    BRANDS_POLO_LINK: '[href="/brand_products/Polo"]',
+    BRANDS_PRODUCTS: ".brand-products",
+    VERIFY_BRAND_POLO: '[href="/product_details/1"]',
+    BRANDS_HM_LINK: '[href="/brand_products/H&M"]',
+    VERIFY_BRAND_HM: '[href="/product_details/6"]',
+
   },
   CONTACT_US_PAGE: {
     CONTACT_US_BTN: 'a[href="/contact_us"]',
