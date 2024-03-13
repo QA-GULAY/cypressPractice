@@ -1,6 +1,6 @@
 import LOCATORS from "../../support/locators"
 import HomePage from "../Page/HomePage"
-import TestCases from "../Page/TestCasesPage"
+
 describe("TestCases Tests", () => {
     const homePage = new HomePage()
     let user;
