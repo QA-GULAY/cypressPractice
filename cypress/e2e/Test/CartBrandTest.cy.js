@@ -1,7 +1,6 @@
 import HomePage from "../Page/HomePage";
 import LOCATORS from "../../support/locators";
 describe('Brand Page Test', () => {
-  //const homePage = new HomePage()
   let user;
   before(() => {
     cy.fixture('userDatas/info').then((userInfo) => {
