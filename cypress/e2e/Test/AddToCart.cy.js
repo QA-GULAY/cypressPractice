@@ -1,7 +1,7 @@
 import HomePage from "../Page/HomePage"
 import LOCATORS from "../../support/locators";
 describe("Add to Cart Tests", () => {
-    const testPage = new HomePage()
+    const homePage = new HomePage()
     let user;
     before(() => {
         cy.fixture('userDatas/info').then((userInfo) => {
@@ -9,7 +9,7 @@ describe("Add to Cart Tests", () => {
         })
     })
     it("Kullanici ürünleri basariliyla sepete ekleyebilmeli", () => {
-        testPage.visitPage()
+        homePage.visitPage()
         cy.getBySel(LOCATORS.ADD_TO_CART.PRODUCTS).should("be.visible")
         cy.getBySel(LOCATORS.ADD_TO_CART.PRODUCTS).click()
         cy.getBySel(LOCATORS.ADD_TO_CART.PRODUCT_1).contains('Add to cart').should("be.visible")
