@@ -1,7 +1,9 @@
 import HomePage from "../Page/HomePage"
 import LoginPage from "../Page/LoginPage"
 import LOCATORS from "../../support/locators"
+
 describe("View products after login",() => {
+
     const homePage = new HomePage()
     const loginPage = new LoginPage()
     let user;
@@ -11,6 +13,7 @@ describe("View products after login",() => {
         })
     })
  it("The user can see added product after login" , () => {
+
         homePage.visitPage()
         cy.getBySel(LOCATORS.HOME_PAGE.HEADER).should("be.visible");
         cy.getBySel(LOCATORS.PRODUCT_PAGE.PRODUCT_BTN).click().wait(2000);

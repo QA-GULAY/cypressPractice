@@ -22,7 +22,9 @@
   },
   "userInfo": {
     "userName": "John",
+
     "email": "jime_wick1@mail.com",
+
     "password": "1234567",
     "dayOfBirth": "1",
     "monthOfBirth": "January",
