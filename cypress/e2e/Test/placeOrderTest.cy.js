@@ -25,12 +25,12 @@ describe("Place Order", () => {
         cy.visit('/')
         cy.deleteAccount();
     });
-    it("Kullanici Odeme Yaparken Hesap Olusturabilmeli ", () => {
+    it("The user creates account when making a payment ", () => {
         homePage.visitPage();
         cy.title().should("eq", user.home.title);
         cy.get(LOCATORS.ADD_TO_CART.PRODUCT_1).contains("Add to cart").should("be.visible");
         cy.get(LOCATORS.ADD_TO_CART.PRODUCT_1).contains("Add to cart").click();
-        cy.get(LOCATORS.ADD_TO_CART.WIEW_RECOMMENDCART).contains("View Cart").click();
+        cy.get(LOCATORS.ADD_TO_CART.VIEW_RECOMMENDCART).contains("View Cart").click();
         cartPage.getShoppingCartText().should("be.visible");
         cartPage.clickToCheckoutBtn();
         cartPage.clickToModalRegisterLoginBtn();
@@ -51,7 +51,7 @@ describe("Place Order", () => {
         //paymentPage.getSuccessTextMessage().should('contain','Your order has been placed successfully!' )
         cy.getByDataQa(LOCATORS.PAYMENT_PAGE.CONFIRM_MESSAGE).should('be.visible')
     })
-     it("Kullanici odeme yapmadan once kayit yapmali", () => {
+     it("The user must register before paying", () => {
         homePage.visitPage()
         cy.title().should('eq', user.home.title)
         signupPage.clickLogin_SignupBtn()

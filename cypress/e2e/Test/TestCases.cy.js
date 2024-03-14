@@ -9,7 +9,7 @@ describe("TestCases Tests", () => {
             user = userInfo
         })
     })
- it("Kullanici test case sayfasina basariyla erisebilmeli", () => {
+ it("The user successfully accesses the test cases page", () => {
         homePage.visitPage()
         cy.contains(user.home.homePageText).should("be.visible")
         cy.getBySel(LOCATORS.HOME_PAGE.TEST_CASES_BTN).click()

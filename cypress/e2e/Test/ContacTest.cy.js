@@ -14,7 +14,7 @@ describe('Contact Test', () => {
         })
     })
 
-    it('Kullanici Mesajini Iletebilmeli', () => {
+    it('The user verifies that her message has been conveyed', () => {
         homePage.visitPage() 
         cy.title().should('eq', user.home.title)  
         cy.getBySel(LOCATORS.CONTACT_US_PAGE.CONTACT_US_BTN).click();

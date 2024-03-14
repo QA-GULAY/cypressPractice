@@ -10,14 +10,14 @@ describe('Scroll Down Functionality Test', () => {
             user = userInfo
         })
     })
-    it('Kullanici subscription butonunu gorebilmeli', () => {
+    it('The user should be able to see the subscription button', () => {
         homePage.visitPage() 
         cy.title().should('eq', user.home.title) 
         cy.getBySel(LOCATORS.PAGE_SCROLL.SCROLL).scrollIntoView()
         cy.getBySel(LOCATORS.PAGE_SCROLL.SCROLL).should('be.visible')
         cy.getBySel(LOCATORS.PAGE_SCROLL.HOMETEXT).scrollIntoView().should('be.visible')
     });
-    it('Kullanici arrow butonu kullanarak sayfayi asayi yukari yapabilmeli', () => {
+    it('The user should be able to move the page up and down using the arrow button.', () => {
         homePage.visitPage() 
         cy.title().should('eq', user.home.title) 
         cy.getBySel(LOCATORS.PAGE_SCROLL.SCROLL).trigger('mousedown').should('be.visible')

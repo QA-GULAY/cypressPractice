@@ -14,7 +14,7 @@ describe('User Login Test', () => {
         })
     })
 
-    it('Kullanici login yapabilmelli', () => {
+    it('The user must be able to log in', () => {
         homePage.visitPage()
         cy.title().should('eq', user.home.title)
         cy.getBySel(LOCATORS.HOME_PAGE.LOGIN_BTN).click()
@@ -22,8 +22,8 @@ describe('User Login Test', () => {
         loginPage.userLogin(user)
         cy.getByCompoundSel(LOCATORS.HOME_PAGE.HEADER, LOCATORS.LOGIN_PAGE.LOGGED_AS_TEXT).should('be.visible')
     });
-    it("Kullanici yanliş email ve password ile giriş yaptiginda  uyari mesaji alabilmeli", () => {
-        user.userLoginPage.emailAddress = "testlogin@mail.com"
+    it("The user should be able to receive a warning message when he/she logs in with the wrong email and password.", () => {
+        user.userLoginPage.emailAddress  = "testlogin@mail.com"
         homePage.visitPage()
         cy.getBySel(LOCATORS.HOME_PAGE.LOGIN_BTN).click()
         cy.getBySel(LOCATORS.LOGIN_PAGE.LOGIN_ACCOUNT_TEXT).should('have.text', user.userLoginPage.loginAccountText)

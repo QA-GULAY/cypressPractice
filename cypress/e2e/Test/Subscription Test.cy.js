@@ -1,17 +1,15 @@
-import LoginPage from "../Page/LoginPage";
 import HomePage from "../Page/HomePage";
 import LOCATORS from "../../support/locators";
 describe("Should subscribe successfully ", () => {
-    const testPage = new HomePage()
-    const loginPage = new LoginPage()
+    const homePage = new HomePage()
     let user;
     before(() => {
         cy.fixture('userDatas/info').then((userInfo) => {
             user = userInfo
         })
     })
-    it("Verify Subscription", () => {
-        testPage.visitPage()
+    it("The user should be able to subscribe on the card page", () => {
+        homePage.visitPage()
         cy.title().should('eq', user.home.title)
         cy.getBySel(LOCATORS.CART_PAGE.CART_BTN).click()
         cy.getBySel(LOCATORS.CART_PAGE.SUBSCRITION_TEXT).scrollIntoView()

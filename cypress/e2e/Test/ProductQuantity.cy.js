@@ -13,7 +13,7 @@ describe('Product Quantity in Cart Test', () => {
 
     })
 
-    it('Kullanici sayisini arttirdigi urunu sepette dogrulayabilmeli', () => {
+    it('The user should be able to verify the product they have increased the number of in the basket.', () => {
         homePage.visitPage()
         cy.contains(user.home.homePageText).should("be.visible")
         productQuantity.clickViewProductButton()

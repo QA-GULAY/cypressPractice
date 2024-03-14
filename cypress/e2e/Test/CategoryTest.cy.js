@@ -12,7 +12,7 @@ describe("Category Test", () => {
             user = userInfo
         })
     })
-    it("Kullanici ana sayfada sol bolumundeki urunlerin kategorilerine erisebilmeli ", () => {
+    it("The user successfully accesses to the product categories on the left side of the home page. ", () => {
         homePage.visitPage()
         homePage.verifyCategoryTitle().should('have.text', user.home.category)
         homePage.clickWomen()

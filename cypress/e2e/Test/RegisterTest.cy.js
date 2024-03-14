@@ -19,7 +19,7 @@ describe('Register Test', () => {
     after(() => {
         cy.deleteAccount()
   })
-    it('Kullanici Hesap Olusturabilmeli', () => {
+    it('User can create account', () => {
         homePage.visitPage()
         cy.title().should('eq', user.home.title)
         cy.getBySel(LOCATORS.HOME_PAGE.LOGIN_BTN).click()
