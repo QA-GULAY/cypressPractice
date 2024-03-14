@@ -1,9 +1,7 @@
 import LOCATORS from "../../support/locators";
 import HomePage from "../Page/HomePage";
-import LoginPage from "../Page/LoginPage";
-import SignupPage from "../Page/SignupPage";
-
 describe('User login Test', () => {
+    
     const homePage = new HomePage
     let user;
 
@@ -12,7 +10,7 @@ describe('User login Test', () => {
             user = userInfo
         })
     });
-    it.only('Kullaniciyi mevcut email ile kaydedin', () => {
+    it.only('Register user with existing email', () => {
         homePage.visitPage()
         cy.title().should('eq', user.home.title)
         cy.getBySel(LOCATORS.HOME_PAGE.LOGIN_BTN).click()
