@@ -1,16 +1,16 @@
 import HomePage from "../Page/HomePage"
-import LoginPage from "../Page/LoginPage"
 import LOCATORS from "../../support/locators"
-describe('User Can See All Details After Entering  To First Product Details ', ()=>{
+describe('Verify all products and product detail page ', ()=>{
+    
 const hmePage = new HomePage()
-const lognPage = new LoginPage()
 let user
+    
 before(() => {
     cy.fixture('userDatas/info').then((userInfo) => {
         user = userInfo
     })
 })
-it('User Can See All Details After Entering  To First Product Details',()=>{
+it('The user should be able to enter the detail section of the first product and see all the details about the product.',()=>{
     hmePage.visitPage()
     cy.getBySel(LOCATORS.HOME_PAGE.HEADER).should("be.visible");
     cy.getBySel(LOCATORS.HOME_PAGE.PRODUCTS_BTN).click()
