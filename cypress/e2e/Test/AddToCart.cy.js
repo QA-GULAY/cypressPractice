@@ -8,9 +8,9 @@ describe("Add to Cart Tests", () => {
             user = userInfo
         })
     })
-    it("Kullanici ürünleri basariliyla sepete ekleyebilmeli", () => {
+    it("The user must be able to successfully add the products to the cart.", () => {
         homePage.visitPage()
-        cy.getBySel(LOCATORS.ADD_TO_CART.PRODUCTS).should("be.visible")
+        cy.getBySel(LOCATORS.HOME_PAGE.PRODUCTS_BTN).should("be.visible")
         cy.getBySel(LOCATORS.ADD_TO_CART.PRODUCTS).click()
         cy.getBySel(LOCATORS.ADD_TO_CART.PRODUCT_1).contains('Add to cart').should("be.visible")
         cy.getBySel(LOCATORS.ADD_TO_CART.PRODUCT_1).contains('Add to cart').click()
