@@ -7,6 +7,7 @@ import PaymentPage from "../Page/PaymentPage";
 import SignupPage from "../Page/SignupPage";
 
 describe("Place Order", () => {
+    
     const homePage = new HomePage
     const loginPage = new LoginPage
     const signupPage = new SignupPage
@@ -25,7 +26,7 @@ describe("Place Order", () => {
         cy.visit('/')
         cy.deleteAccount();
     });
-    it("Kullanici Odeme Yaparken Hesap Olusturabilmeli ", () => {
+    it("The user creates account when making a payment  ", () => {
         homePage.visitPage();
         cy.title().should("eq", user.home.title);
         cy.get(LOCATORS.ADD_TO_CART.PRODUCT_1).contains("Add to cart").should("be.visible");
@@ -51,7 +52,7 @@ describe("Place Order", () => {
         //paymentPage.getSuccessTextMessage().should('contain','Your order has been placed successfully!' )
         cy.getByDataQa(LOCATORS.PAYMENT_PAGE.CONFIRM_MESSAGE).should('be.visible')
     })
-     it("Kullanici odeme yapmadan once kayit yapmali", () => {
+     it("The user must register before paying", () => {
         homePage.visitPage()
         cy.title().should('eq', user.home.title)
         signupPage.clickLogin_SignupBtn()
