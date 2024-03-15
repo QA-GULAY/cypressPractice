@@ -1,8 +1,8 @@
 import LOCATORS from "../../support/locators";
 import HomePage from "../Page/HomePage";
 import LoginPage from "../Page/LoginPage";
-
 describe('Payment Test', () => {
+
     const homePage = new HomePage
     const loginPage = new LoginPage
     let user;
@@ -12,7 +12,7 @@ describe('Payment Test', () => {
             user = userInfo
         })
     })
-    it('The user should be able to place orders and make payments after registering on the site..', () => {
+    it('The user should be able to place orders and make payments after registering on the site.', () => {
         homePage.visitPage()
         cy.title().should('eq', user.home.title)
         cy.getBySel(LOCATORS.HOME_PAGE.LOGIN_BTN).click()

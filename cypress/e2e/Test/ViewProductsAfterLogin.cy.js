@@ -2,9 +2,11 @@ import HomePage from "../Page/HomePage"
 import LoginPage from "../Page/LoginPage"
 import LOCATORS from "../../support/locators"
 describe("View products after login",() => {
+
     const homePage = new HomePage()
     const loginPage = new LoginPage()
     let user;
+    
     before(() => {
         cy.fixture('userDatas/info').then((userInfo) => {
             user = userInfo

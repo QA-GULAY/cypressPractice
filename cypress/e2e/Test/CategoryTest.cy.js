@@ -1,8 +1,6 @@
 import HomePage from "../Page/HomePage"
 import CategoryPage from "../Page/CategoryPage"
 import LOCATORS from "../../support/locators"
-
-
 describe("Category Test", () => {
     const homePage = new HomePage
     const categoryPage = new CategoryPage

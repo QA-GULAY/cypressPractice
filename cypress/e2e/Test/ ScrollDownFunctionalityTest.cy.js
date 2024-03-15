@@ -1,7 +1,5 @@
 import LOCATORS from "../../support/locators";
 import HomePage from "../Page/HomePage";
-
-
 describe('Scroll Down Functionality Test', () => {
     const homePage = new HomePage
     let user;

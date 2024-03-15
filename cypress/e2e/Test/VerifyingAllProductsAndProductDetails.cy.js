@@ -1,8 +1,10 @@
 import HomePage from "../Page/HomePage"
 import LOCATORS from "../../support/locators"
 describe('Verify all products and product detail page ', ()=>{
+
 const hmePage = new HomePage()
 let user
+
 before(() => {
     cy.fixture('userDatas/info').then((userInfo) => {
         user = userInfo

@@ -1,6 +1,7 @@
 import LOCATORS from "../../support/locators";
 import HomePage from "../Page/HomePage";
 describe('Remove Products From Cart', () => {
+    
     const homePage = new HomePage
     let user;
     before(() => {

@@ -2,7 +2,6 @@ import LOCATORS from "../../support/locators";
 import HomePage from "../Page/HomePage";
 import LoginPage from "../Page/LoginPage";
 import SignupPage from "../Page/SignupPage";
-
 describe('Register Test', () => {
     
     const homePage = new HomePage

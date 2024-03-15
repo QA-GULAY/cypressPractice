@@ -1,6 +1,7 @@
 import HomePage from "../Page/HomePage";
 import LOCATORS from "../../support/locators";
 describe("Should subscribe successfully ", () => {
+    
     const homePage = new HomePage()
     let user;
     before(() => {
