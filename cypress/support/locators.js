@@ -9,13 +9,12 @@ const LOCATORS = {
     LOGIN_BTN: 'a[href="/login"]',
     HEADER: "#header",
     PRODUCTS_BTN: '[href="/products"]',//t
-    CART_BUTTON: 'header#header li:nth-child(3) > a',
+    CARD_BTN: 'header#header li:nth-child(3) > a',//T
     LOGOUT_BTN: 'header#header li:nth-child(4) > a',
     SUBSCRIPTION_TEXT: ".single-widget",
     INPUT_BOX_FOR_EMAIL: "#susbscribe_email",
     ARROW_BTN: "#subscribe",
     SUCCESS_SUBS_MSG_: ".alert-success.alert",
-    CART_BTN: "a[href='/view_cart']",
     CATEGORY: " .left-sidebar>h2",
     WOMEN: ' [data-parent="#accordian"]',
     DRESS: '[href="/category_products/1"]',
@@ -115,9 +114,6 @@ const LOCATORS = {
   PAYMENT_PAGE: {
     ADD_TO_CART_BTN:
       "div:nth-child(11) > div > div.single-products > div.product-overlay > div > a",
-    CONTINUE_SHOPPING: ".modal-footer",
-    CART_BTN: "header#header li:nth-child(3) > a",
-    PROCEED_TO_CHECKOUT_BTN: "section#do_action div > a",
     DESCRIPTION_FORM: ".form-control",
     PLACE_ORDER_BTN: "section#cart_items div:nth-child(7) > a",
     NAME_ON_CARD: "name-on-card",
@@ -138,7 +134,7 @@ const LOCATORS = {
     ADD_RECOMENDED: ".recommended_items .item.active .add-to-cart",
     CART_PRODUCT: "#product-4 h4 > a",
   },
-  ADD_TO_CART: {
+  ADD_TO_CARD: {
     PRODUCT_1: '[data-product-id="1"]',
     PRODUCT_2: '[data-product-id="2"]',
     COUNTINUE_SHOPPING: ".btn.btn-success.close-modal.btn-block",
@@ -152,7 +148,7 @@ const LOCATORS = {
     RECOMENDED_ITEMS: ".recommended_items",
     ADD_RECOMENDED: ".recommended_items .item.active .add-to-cart",
     VIEW_RECOMMENDCART: "#cartModal u",
-    CART_PRODUCT: "#product-4 h4 > a",
+    CARD_PRODUCT: "#product-4 h4 > a",
     PROCEED_TO_CHECKOUT_BTN: '.col-sm-6 .btn'
   },
     CHECKOUT_PAGE: {
