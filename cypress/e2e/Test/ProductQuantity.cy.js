@@ -1,6 +1,7 @@
 import HomePage from "../Page/HomePage";
 import ProductQuantity from "../Page/ProductQuantityPage";
 describe('Product Quantity in Cart Test', () => {
+    
     const homePage = new HomePage
     const productQuantity = new ProductQuantity
     let user;
@@ -9,7 +10,7 @@ describe('Product Quantity in Cart Test', () => {
         cy.fixture('userDatas/info').then((userInfo) => {
             user = userInfo
         })
-    })
+   })
     it('The user should be able to verify the product they have increased the number of in the basket.', () => {
         homePage.visitPage()
         cy.contains(user.home.homePageText).should("be.visible")

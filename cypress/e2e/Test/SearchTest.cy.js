@@ -1,7 +1,8 @@
 import LOCATORS from "../../support/locators";
 import HomePage from "../Page/HomePage"
 describe("Searching Test", () => {
-    const homePage = new HomePage()
+  const homePage = new HomePage()
+  
     let user;
 
     before(() => {

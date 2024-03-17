@@ -3,7 +3,6 @@ import HomePage from "../Page/HomePage";
 import LoginPage from "../Page/LoginPage";
 import SignupPage from "../Page/SignupPage";
 describe('Register Test', () => {
-    
     const homePage = new HomePage
     const loginPage = new LoginPage
     const signupPage = new SignupPage

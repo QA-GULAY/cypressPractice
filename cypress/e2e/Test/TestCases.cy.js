@@ -9,7 +9,6 @@ describe("TestCases Tests", () => {
             user = userInfo
         })
     })
-
     it("The user successfully accesses the test cases page", () => {
         homePage.visitPage()
         cy.contains(user.home.homePageText).should("be.visible")

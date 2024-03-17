@@ -4,11 +4,11 @@ import LoginPage from "../Page/LoginPage";
 import PaymentPage from "../Page/PaymentPage";
 import CheckoutPage from "../Page/CheckoutPage";
 describe('Payment Test', () => {
-
     const homePage = new HomePage
     const loginPage = new LoginPage
     const paymentPage = new PaymentPage
     const checkoutPage = new CheckoutPage
+
     let user;
 
     before(() => {
@@ -29,7 +29,6 @@ describe('Payment Test', () => {
         cy.getBySel(LOCATORS.HOME_PAGE.CARD_BTN).click()
         cy.getBySel(LOCATORS.ADD_TO_CARD.PROCEED_TO_CHECKOUT_BTN).should('be.visible')
         paymentPage.clickProceedToCheckoutBtn()
-       // cy.getBySel(LOCATORS.ADD_TO_CARD.PROCEED_TO_CHECKOUT_BTN).click()
         cy.contains(user.paymentPage.addressDetails).should('be.visible')
         cy.contains(user.paymentPage.reviewYourOrder).should('be.visible')
         paymentPage.descriptionComment(user)
