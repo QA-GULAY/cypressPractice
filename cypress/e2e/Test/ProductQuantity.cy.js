@@ -1,8 +1,8 @@
+import LOCATORS from "../../support/locators";
 import HomePage from "../Page/HomePage";
-import ProductQuantity from "../Page/ProductQuantityPage";
 describe('Product Quantity in Cart Test', () => {
     const homePage = new HomePage
-    const productQuantity = new ProductQuantity
+
     let user;
 
     before(() => {
@@ -13,11 +13,11 @@ describe('Product Quantity in Cart Test', () => {
     it('The user should be able to verify the product they have increased the number of in the basket.', () => {
         homePage.visitPage()
         cy.contains(user.home.homePageText).should("be.visible")
-        productQuantity.clickViewProductButton()
+        cy.getBySel(LOCATORS.PRODUCT_PAGE.VIEW_PRODUCT_BTN).click()
         cy.url().should('include', '/product_details/1')
-        productQuantity.urununSayisiniArttirma().should('have.value', '4');
-        productQuantity.clickAddToCartButton()
-        productQuantity.clickViewCartButton()
-        productQuantity.verifyDetail().should('contain', '4')
+        cy.get('#quantity').clear().type(4).should('have.value', '4');
+        cy.getBySel(LOCATORS.PRODUCT_QUANTITY.ADD_TO_CARD_BUTTON).click()
+        cy.getBySel(LOCATORS.ADD_TO_CARD.VIEW_CARD).click()
+        cy.getBySel(LOCATORS.PRODUCT_QUANTITY.QUANTITY_DETAIL).should('contain', '4')
     })
 });

@@ -3,7 +3,7 @@ import LOCATORS from "../../support/locators"
 class CartPage {
     
     clickToCheckoutBtn() {
-        cy.getBySel(LOCATORS.CART_PAGE.CHECKOUT_BTN).click()
+        cy.getBySel(LOCATORS.CARD_PAGE.CHECKOUT_BTN).click()
     }
 
 }

@@ -1,7 +1,7 @@
 import HomePage from "../Page/HomePage"
 import LOCATORS from "../../support/locators"
 describe('Verify all products and product detail page ', ()=>{
-const hmePage = new HomePage()
+const homePage = new HomePage()
 
 let user
 
@@ -11,7 +11,7 @@ before(() => {
     })
 })
 it('The user should be able to enter the detail section of the first product and see all the details about the product.',()=>{
-    hmePage.visitPage()
+    homePage.visitPage()
     cy.getBySel(LOCATORS.HOME_PAGE.HEADER).should("be.visible");
     cy.getBySel(LOCATORS.HOME_PAGE.PRODUCTS_BTN).click()
     cy.getBySel(LOCATORS.PRODUCT_PAGE.ALL_PRODUCTS_TEXT).should('be.visible')

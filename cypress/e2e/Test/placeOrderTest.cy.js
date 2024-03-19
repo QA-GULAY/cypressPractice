@@ -30,16 +30,17 @@ describe("Place Order", () => {
         cy.title().should("eq", user.home.title);
         cy.get(LOCATORS.ADD_TO_CARD.PRODUCT_1).contains("Add to cart").should("be.visible");
         homePage.clickProduct_1()
-        cy.get(LOCATORS.ADD_TO_CARD.VIEW_RECOMMENDCART).contains("View Cart").click();
-        cy.getBySel(LOCATORS.CART_PAGE.SHOPPING_CART_TEXT) .should("be.visible");
+        cy.get(LOCATORS.ADD_TO_CARD.VIEW_RECOMMENDCARD).contains("View Cart").click();
+        cy.getBySel(LOCATORS.CARD_PAGE.SHOPPING_CARD_TEXT) .should("be.visible");
         cartPage.clickToCheckoutBtn();
-        cy.getBySel(LOCATORS.CART_PAGE.CHECKOUT_MODAL_REGISTER_LOGIN_BTN).click();
+        cy.getBySel(LOCATORS.CARD_PAGE.CHECKOUT_MODAL_REGISTER_LOGIN_BTN).click();
         loginPage.signUp(user);
         signupPage.createAccount(user);
         cy.getByDataQa(LOCATORS.SIGNUP_PAGE.ACCOUNT_CREATED).should('be.visible')
         cy.getByDataQa(LOCATORS.SIGNUP_PAGE.CONTINUE_BTN).click()
         cy.getByCompoundSel(LOCATORS.HOME_PAGE.HEADER,LOCATORS.LOGIN_PAGE.LOGGED_AS_TEXT).should("be.visible");
-        cy.getByCompoundSel(LOCATORS.HOME_PAGE.HEADER, LOCATORS.HOME_PAGE.CARD_BTN).click();
+        //cy.getByCompoundSel(LOCATORS.HOME_PAGE.HEADER, LOCATORS.HOME_PAGE.CARD_BTN).click();
+        cy.getBySel(LOCATORS.HOME_PAGE.CARD_BTN).click()
         cartPage.clickToCheckoutBtn();
         checkoutPage.verifyAddressDetails(user)
         checkoutPage.reviewOrder(LOCATORS.CHECKOUT_PAGE.REVIEW_ORDER.PRODUCT_1, 'Blue Top')

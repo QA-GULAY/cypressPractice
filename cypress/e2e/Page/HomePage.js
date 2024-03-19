@@ -6,13 +6,13 @@ class HomePage {
         cy.visit("/")
     }
     loggedUserNameText() {
-        return cy.getByCompoundSel(LOCATORS.HOME_PAGE.HEADER, LOCATORS.SIGNUP_PAGE.LOGGED_AS_TEXT)
+        return cy.getByCompoundSel(LOCATORS.HOME_PAGE.HEADER, LOCATORS.LOGIN_PAGE.LOGGED_AS_TEXT)
     }
     clickProduct_1() {
         cy.getBySel(LOCATORS.ADD_TO_CARD.PRODUCT_1).contains('Add to cart').click()
     }
     clickView_CartBtn() {
-        cy.getBySel(LOCATORS.ADD_TO_CARD.VIEW_CART).click()
+        cy.getBySel(LOCATORS.ADD_TO_CARD.VIEW_CARD).click()
     }
     verifyCategoryTitle() {
         return cy.getBySel(LOCATORS.HOME_PAGE.CATEGORY);

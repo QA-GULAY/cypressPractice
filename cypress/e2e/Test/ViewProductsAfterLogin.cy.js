@@ -22,15 +22,15 @@ describe("View products after login",() => {
         cy.getBySel(LOCATORS.PRODUCT_PAGE.SEARCH_BOX).type("Men Tshirt")
         cy.getBySel(LOCATORS.PRODUCT_PAGE.SEARCH_ITEM).click()
         cy.getBySel(LOCATORS.PRODUCT_PAGE.SEARCHED_PRODUCTS_TEXT).should('be.visible')
-        cy.getBySel(LOCATORS.ADD_TO_CART.PRODUCT_2).contains('Add to cart').should("be.visible")
-        cy.getBySel(LOCATORS.ADD_TO_CART.PRODUCT_2).contains('Add to cart').click().wait(2000)
-        cy.getBySel(LOCATORS.ADD_TO_CART.VIEW_CART).click()
-        cy.getBySel(LOCATORS.CART_PAGE.CART_DESCRIPTION).should('contain','Men Tshirt')
-        cy.getBySel(LOCATORS.CART_PAGE.LOGIN_BTN_CART_PAGE).click()
+        cy.getBySel(LOCATORS.ADD_TO_CARD.PRODUCT_2).contains('Add to cart').should("be.visible")
+        cy.getBySel(LOCATORS.ADD_TO_CARD.PRODUCT_2).contains('Add to cart').click().wait(2000)
+        cy.getBySel(LOCATORS.ADD_TO_CARD.VIEW_CARD).click()
+        cy.getBySel(LOCATORS.CARD_PAGE.CARD_DESCRIPTION).should('contain','Men Tshirt')
+        cy.getBySel(LOCATORS.CARD_PAGE.LOGIN_BTN_CARD_PAGE).click()
         loginPage.userLogin(user)
         cy.getByCompoundSel(LOCATORS.HOME_PAGE.HEADER,LOCATORS.LOGIN_PAGE.LOGGED_AS_TEXT).should('be.visible')
-        cy.getBySel(LOCATORS.HOME_PAGE.CART_BUTTON).click()
-        cy.getBySel(LOCATORS.CART_PAGE.CART_DESCRIPTION).should('contain','Men Tshirt')
+        cy.getBySel(LOCATORS.HOME_PAGE.CARD_BTN).click()
+        cy.getBySel(LOCATORS.CARD_PAGE.CARD_DESCRIPTION).should('contain','Men Tshirt')
     });   
 });
     
