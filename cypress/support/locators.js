@@ -103,12 +103,9 @@ const LOCATORS = {
     CHECKOUT_MODAL_REGISTER_LOGIN_BTN: "#checkoutModal u",
   },
   REMOVE_PRODUCT_PAGE: {
-    ADD_TO_CARD_BTN:
-      "div:nth-child(11) > div > div.single-products > div.product-overlay > div > a",
     CONTINUE_SHOPPING: ".modal-footer",
     X_BUTTON: ".cart_quantity_delete",
   },
-
   PAYMENT_PAGE: {
     ADD_TO_CARD_BTN:
       "div:nth-child(11) > div > div.single-products > div.product-overlay > div > a",
