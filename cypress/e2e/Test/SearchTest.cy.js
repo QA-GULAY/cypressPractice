@@ -1,9 +1,10 @@
 import LOCATORS from "../../support/locators";
 import HomePage from "../Page/HomePage"
-describe("Homepage Tests", () => {
-    
-    const homePage = new HomePage()
+describe("Searching Test", () => {
+  const homePage = new HomePage()
+  
     let user;
+
     before(() => {
         cy.fixture('userDatas/info').then((userInfo) => {
             user = userInfo

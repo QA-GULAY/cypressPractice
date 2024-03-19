@@ -8,14 +8,13 @@ const LOCATORS = {
   HOME_PAGE: {
     LOGIN_BTN: 'a[href="/login"]',
     HEADER: "#header",
-    PRODUCTS_BTN: '[href="/products"]',//t
-    CART_BUTTON: 'header#header li:nth-child(3) > a',
+    PRODUCTS_BTN: '[href="/products"]',
+    CARD_BTN: 'header#header li:nth-child(3) > a',
     LOGOUT_BTN: 'header#header li:nth-child(4) > a',
     SUBSCRIPTION_TEXT: ".single-widget",
     INPUT_BOX_FOR_EMAIL: "#susbscribe_email",
     ARROW_BTN: "#subscribe",
     SUCCESS_SUBS_MSG_: ".alert-success.alert",
-    CART_BTN: "a[href='/view_cart']",
     CATEGORY: " .left-sidebar>h2",
     WOMEN: ' [data-parent="#accordian"]',
     DRESS: '[href="/category_products/1"]',
@@ -60,10 +59,10 @@ const LOCATORS = {
     ACCOUNT_CREATED: "account-created",
     CONTINUE_BTN: "continue-button",
   },
-  NEW_USER_SIGNUP: {   //DEGISIKLIK YAPILDI
-    NAME:"signup-name",
-    EMAIL_ADDRESS:"signup-email",
-    SINGUP_BTN:"signup-button", //DEGISIKLIK YAPILDI
+  NEW_USER_SIGNUP: {
+    NAME: "signup-name",
+    EMAIL_ADDRESS: "signup-email",
+    SINGUP_BTN: "signup-button",
   },
   DELETE_PAGE: {
     DELETE_ACCOUNT_BTN: "li:nth-child(5) > a",
@@ -92,32 +91,24 @@ const LOCATORS = {
     FIRST_PRODUCT_BRAND: "p:nth-child(8) > b"
   },
 
-  CART_PAGE: {
-    CART_BTN: "header#header li:nth-child(3) > a",
+  CARD_PAGE: {
     SUBSCRITION_TEXT: "footer#footer h2",
     EMAIL_BOX: "#susbscribe_email",
     SUBSCRITION_BTN: "#subscribe",
     VERIFY_TEXT: "#success-subscribe",
-    CART_DESCRIPTION: 'section#cart_items > div',
-    LOGIN_BTN_CART_PAGE: "header#header li:nth-child(4) > a",
-    SHOPPING_CART_TEXT: "#cart_items li.active",
+    CARD_DESCRIPTION: 'section#cart_items > div',
+    LOGIN_BTN_CARD_PAGE: "header#header li:nth-child(4) > a",
+    SHOPPING_CARD_TEXT: "#cart_items li.active",
     CHECKOUT_BTN: "#do_action div > a",
     CHECKOUT_MODAL_REGISTER_LOGIN_BTN: "#checkoutModal u",
   },
   REMOVE_PRODUCT_PAGE: {
-    ADD_TO_CART_BTN:
-      "div:nth-child(11) > div > div.single-products > div.product-overlay > div > a",
     CONTINUE_SHOPPING: ".modal-footer",
-    CART_BTN: "header#header li:nth-child(3) > a",
     X_BUTTON: ".cart_quantity_delete",
   },
-
   PAYMENT_PAGE: {
-    ADD_TO_CART_BTN:
+    ADD_TO_CARD_BTN:
       "div:nth-child(11) > div > div.single-products > div.product-overlay > div > a",
-    CONTINUE_SHOPPING: ".modal-footer",
-    CART_BTN: "header#header li:nth-child(3) > a",
-    PROCEED_TO_CHECKOUT_BTN: "section#do_action div > a",
     DESCRIPTION_FORM: ".form-control",
     PLACE_ORDER_BTN: "section#cart_items div:nth-child(7) > a",
     NAME_ON_CARD: "name-on-card",
@@ -136,15 +127,13 @@ const LOCATORS = {
     PRODUCT_2_TOTAL: "#product-2 .cart_total_price",
     RECOMENDED_ITEMS: ".recommended_items",
     ADD_RECOMENDED: ".recommended_items .item.active .add-to-cart",
-    WIEW_RECOMMENDCART: "#cartModal u",
     CART_PRODUCT: "#product-4 h4 > a",
   },
-  ADD_TO_CART: {
-    PRODUCTS: '[href="/products"]',
+  ADD_TO_CARD: {
     PRODUCT_1: '[data-product-id="1"]',
     PRODUCT_2: '[data-product-id="2"]',
     COUNTINUE_SHOPPING: ".btn.btn-success.close-modal.btn-block",
-    VIEW_CART: '[class="text-center"] a',  
+    VIEW_CARD: '[class="text-center"] a',
     PRODUCT_1_PRICE: "#product-1 .cart_price",
     PRODUCT_2_PRICE: "#product-2 .cart_price",
     PRODUCT_1_QUANTITY: "#product-1 .disabled",
@@ -153,30 +142,30 @@ const LOCATORS = {
     PRODUCT_2_TOTAL: "#product-2 .cart_total_price",
     RECOMENDED_ITEMS: ".recommended_items",
     ADD_RECOMENDED: ".recommended_items .item.active .add-to-cart",
-    VIEW_RECOMMENDCART: "#cartModal u",
-    CART_PRODUCT: "#product-4 h4 > a",
+    VIEW_RECOMMENDCARD: "#cartModal u",
+    CARD_PRODUCT: "#product-4 h4 > a",
     PROCEED_TO_CHECKOUT_BTN: '.col-sm-6 .btn'
   },
   CHECKOUT_PAGE: {
     DELIVERY_ADDRESS: {
-    FIRST_NAME_LAST_NAME: "#address_delivery > li.address_firstname.address_lastname",
-    ADDRESS1_ADDRESS2: "#address_delivery > li:nth-child(4)",
-    CITY_STATE_POSTCODE: "address_delivery > li.address_city.address_state_name.address_postcode",
-    COUNTRY: "#address_delivery > li.address_country_name",
-    PHONE: "#address_delivery > li.address_phone",
+      FIRST_NAME_LAST_NAME: "#address_delivery > li.address_firstname.address_lastname",
+      ADDRESS1_ADDRESS2: "#address_delivery > li:nth-child(4)",
+      CITY_STATE_POSTCODE: "address_delivery > li.address_city.address_state_name.address_postcode",
+      COUNTRY: "#address_delivery > li.address_country_name",
+      PHONE: "#address_delivery > li.address_phone",
     },
-  REVIEW_ORDER: {
-    PRODUCT_1: "#product-1",
-    PRODUCT_TITLE: "h4 > a",
-    PRODUCT_PRICE: "td.cart_price > p",
-    QUANTITY: "button",
-    TOTAL: "td.cart_total > p",
+    REVIEW_ORDER: {
+      PRODUCT_1: "#product-1",
+      PRODUCT_TITLE: "h4 > a",
+      PRODUCT_PRICE: "td.cart_price > p",
+      QUANTITY: "button",
+      TOTAL: "td.cart_total > p",
     },
     COMMENT_TEXT_AREA: "#ordermsg > textarea",
-    PLACE_ORDER_BTN: "#cart_items a[href='/payment']",
+    PLACE_ORDER_BTN: "#cart_items a[href='/payment']"
   },
-  BRANDS: {//buyuk yazildi
-    PRODUCTS_BTN: '[href="/products"]',//tekrar add to carttan alndi
+  BRANDS: {
+    PRODUCTS_BTN: '[href="/products"]',
     BRANDS_SIDEBAR: ".brands_products",
     BRANDS_POLO_LINK: '[href="/brand_products/Polo"]',
     BRANDS_PRODUCTS: ".brand-products",
@@ -204,9 +193,7 @@ const LOCATORS = {
     ARROW_BTN: '[class="fa fa-angle-up"]'
   },
   PRODUCT_QUANTITY: {
-    VIEW_PRODUCT: "[href='/product_details/1']",
-    ADD_TO_CART_BUTTON: "[type=button]",
-    VIEW_CART_BUTTON: "[href='/view_cart']>u",
+    ADD_TO_CARD_BUTTON: "[type=button]",
     QUANTITY_DETAIL: "#product-1 button",
   },
   CATEGORY: {

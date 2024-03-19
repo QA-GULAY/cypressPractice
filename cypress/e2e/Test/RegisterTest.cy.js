@@ -3,7 +3,6 @@ import HomePage from "../Page/HomePage";
 import LoginPage from "../Page/LoginPage";
 import SignupPage from "../Page/SignupPage";
 describe('Register Test', () => {
-    
     const homePage = new HomePage
     const loginPage = new LoginPage
     const signupPage = new SignupPage
@@ -18,7 +17,7 @@ describe('Register Test', () => {
     after(() => {
         cy.deleteAccount()
   })
-    it('User can create account', () => {
+    it('The user can create account', () => {
         homePage.visitPage()
         cy.title().should('eq', user.home.title)
         cy.getBySel(LOCATORS.HOME_PAGE.LOGIN_BTN).click()

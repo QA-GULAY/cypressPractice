@@ -4,7 +4,6 @@ class CheckoutPage {
     verifyAddressDetails(user){
         cy.get(LOCATORS.CHECKOUT_PAGE.DELIVERY_ADDRESS.FIRST_NAME_LAST_NAME).should('contain', user.userInfo.userName)
         cy.get(LOCATORS.CHECKOUT_PAGE.DELIVERY_ADDRESS.ADDRESS1_ADDRESS2, {timeout: 5000}).should('contain', user.userInfo.address1)
-       // cy.get(LOCATORS.CHECKOUT_PAGE.DELIVERY_ADDRESS.CITY_STATE_POSTCODE, {timeout: 5000}).should('contain', user.userInfo.city)
         cy.get(LOCATORS.CHECKOUT_PAGE.DELIVERY_ADDRESS.COUNTRY).should('contain', user.userInfo.country)
         cy.get(LOCATORS.CHECKOUT_PAGE.DELIVERY_ADDRESS.PHONE).should('contain', user.userInfo.mobilNumber)
     }

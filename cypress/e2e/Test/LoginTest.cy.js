@@ -23,7 +23,7 @@ describe('User Login Test', () => {
         cy.getByCompoundSel(LOCATORS.HOME_PAGE.HEADER, LOCATORS.LOGIN_PAGE.LOGGED_AS_TEXT).should('be.visible')
     });
     it("The user should be able to receive a warning message when he/she logs in with the wrong email and password.", () => {
-        user.userLoginPage.emailAddress = "testlogin@mail.com"
+        user.userLoginPage.emailAddress  = "testlogin@mail.com"
         homePage.visitPage()
         cy.getBySel(LOCATORS.HOME_PAGE.LOGIN_BTN).click()
         cy.getBySel(LOCATORS.LOGIN_PAGE.LOGIN_ACCOUNT_TEXT).should('have.text', user.userLoginPage.loginAccountText)

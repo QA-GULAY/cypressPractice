@@ -1,4 +1,3 @@
-import HomePage from "../Page/HomePage";
 import LOCATORS from "../../support/locators";
 describe('Brand Page Test', () => {
   let user;

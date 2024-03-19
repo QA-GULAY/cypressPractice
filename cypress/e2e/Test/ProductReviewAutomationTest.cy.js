@@ -1,10 +1,8 @@
 import LOCATORS from "../../support/locators";
 import HomePage from "../Page/HomePage";
-import LoginPage from "../Page/LoginPage";
 describe("product review automation ", () => {
-    
-    const testPage = new HomePage()
-    const loginPage = new LoginPage()
+    const homePage = new HomePage()
+
     let user;
     before(() => {
         cy.fixture('userDatas/info').then((userInfo) => {
@@ -12,7 +10,7 @@ describe("product review automation ", () => {
         })
     })
     it("Add review on product", () => {
-        testPage.visitPage()
+        homePage.visitPage()
         cy.getBySel(LOCATORS.PRODUCT_PAGE.PRODUCT_BTN).click()
         cy.getBySel(LOCATORS.PRODUCT_PAGE.ALL_PRODUCT).should('be.visible')
         cy.getBySel(LOCATORS.PRODUCT_PAGE.VIEW_PRODUCT_BTN).click()
