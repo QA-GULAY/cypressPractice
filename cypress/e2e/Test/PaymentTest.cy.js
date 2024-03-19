@@ -4,11 +4,11 @@ import LoginPage from "../Page/LoginPage";
 import PaymentPage from "../Page/PaymentPage";
 import CheckoutPage from "../Page/CheckoutPage";
 describe('Payment Test', () => {
-
     const homePage = new HomePage
     const loginPage = new LoginPage
     const paymentPage = new PaymentPage
     const checkoutPage = new CheckoutPage
+
     let user;
 
     before(() => {

@@ -26,9 +26,7 @@ describe("Add to Cart Tests", () => {
         cy.getBySel(LOCATORS.ADD_TO_CARD.PRODUCT_1_TOTAL).should('contain','Rs. 500')
         cy.getBySel(LOCATORS.ADD_TO_CARD.PRODUCT_2_QUANTITY).should('contain','1')
         cy.getBySel(LOCATORS.ADD_TO_CARD.PRODUCT_2_TOTAL).should('contain','Rs. 400')
-
-
-    })
+  })
 
     it('should add recommended items to the cart', () => {
         cy.visit('/')

@@ -7,6 +7,7 @@ import PaymentPage from "../Page/PaymentPage";
 import SignupPage from "../Page/SignupPage";
 
 describe("Place Order", () => {
+    
     const homePage = new HomePage
     const loginPage = new LoginPage
     const signupPage = new SignupPage
@@ -25,6 +26,7 @@ describe("Place Order", () => {
         cy.visit('/')
         cy.deleteAccount();
     });
+
     it("The user creates account when making a payment ", () => {
         homePage.visitPage();
         cy.title().should("eq", user.home.title);
